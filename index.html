@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum of History</title>
+    <!-- Link to TailwindCSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS for additional styling */
+        .hero-bg {
+            background-image: url('https://source.unsplash.com/featured/?museum');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .glow:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: translateY(-10px);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .overlay-bg {
+            background: linear-gradient(45deg, rgba(29, 78, 216, 0.6), rgba(56, 189, 248, 0.6));
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .carousel-item {
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+            transition: transform 0.3s ease;
+        }
+
+        .event-hover:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+    </style>
+    <script>
+        // Function to change theme colors
+        function changeTheme(color) {
+            document.documentElement.style.setProperty('--theme-color', color);
+        }
+    </script>
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+    <!-- Navbar -->
+    <nav
+        class="bg-gradient-to-r from-blue-600 to-teal-500 text-white p-4 fixed w-full flex justify-between items-center z-10 shadow-lg">
+        <div class="logo text-2xl font-bold">
+            Museum of History
+        </div>
+        <ul class="flex space-x-6 text-lg">
+            <li><a href="#home" class="hover:text-teal-200">Home</a></li>
+            <li><a href="#exhibits" class="hover:text-teal-200">Exhibits</a></li>
+            <li><a href="#events" class="hover:text-teal-200">Events</a></li>
+            <li><a href="#about" class="hover:text-teal-200">About Us</a></li>
+            <li><a href="#contact" class="hover:text-teal-200">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen hero-bg bg-cover bg-center flex items-center justify-center">
+        <div class="absolute inset-0 overlay-bg flex items-center justify-center">
+            <h1 class="text-white text-6xl font-bold fade-in">Explore Our Historical Collections</h1>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="p-8 text-center bg-gray-50">
+        <h2 class="text-3xl font-semibold mb-4">About the Museum</h2>
+        <p class="text-gray-600">Welcome to the Museum of History, where we showcase artifacts, exhibits, and stories
+            that span centuries. Our mission is to preserve and present the rich history of human civilization through
+            engaging and interactive displays.</p>
+    </section>
+
+    <!-- Exhibits Section -->
+    <section id="exhibits" class="w-full p-8 bg-gray-100">
+        <h2 class="text-3xl font-semibold text-center mb-8">Current Exhibits</h2>
+        <div class="carousel relative">
+            <div class="carousel-inner flex space-x-4 overflow-x-scroll">
+                <div class="carousel-item bg-white rounded-lg shadow-md p-6 flex-none w-80 card-hover">
+                    <img src="image1.jpeg" alt="Ancient Artifacts" class="w-full h-48 object-cover rounded-t-lg">
+                    <h3 class="mt-4 text-2xl font-bold text-gray-800">Ancient Artifacts</h3>
+                    <p class="mt-2 text-gray-600">Explore the relics from ancient civilizations that shaped the world.
+                    </p>
+                </div>
+                <div class="carousel-item bg-white rounded-lg shadow-md p-6 flex-none w-80 card-hover">
+                    <img src="image2.jpeg" alt="Historical Paintings" class="w-full h-48 object-cover rounded-t-lg">
+                    <h3 class="mt-4 text-2xl font-bold text-gray-800">Historical Paintings</h3>
+                    <p class="mt-2 text-gray-600">View masterpieces that tell the stories of our past.</p>
+                </div>
+                <div class="carousel-item bg-white rounded-lg shadow-md p-6 flex-none w-80 card-hover">
+                    <img src="image3.jpeg" alt="Cultural Artifacts" class="w-full h-48 object-cover rounded-t-lg">
+                    <h3 class="mt-4 text-2xl font-bold text-gray-800">Cultural Artifacts</h3>
+                    <p class="mt-2 text-gray-600">Discover artifacts that reflect the diverse cultures of the world.</p>
+                </div>
+                <div class="carousel-item bg-white rounded-lg shadow-md p-6 flex-none w-80 card-hover">
+                    <img src="image4.jpeg" alt="Ancient Artifacts" class="w-full h-48 object-cover rounded-t-lg">
+                    <h3 class="mt-4 text-2xl font-bold text-gray-800">Ancient Artifacts</h3>
+                    <p class="mt-2 text-gray-600">Explore the relics from ancient civilizations that shaped the world.
+                    </p>
+                </div>
+                <div class="carousel-item bg-white rounded-lg shadow-md p-6 flex-none w-80 card-hover">
+                    <img src="image5.jpeg" alt="Historical Paintings" class="w-full h-48 object-cover rounded-t-lg">
+                    <h3 class="mt-4 text-2xl font-bold text-gray-800">Historical Paintings</h3>
+                    <p class="mt-2 text-gray-600">View masterpieces that tell the stories of our past.</p>
+                </div>
+                <div class="carousel-item bg-white rounded-lg shadow-md p-6 flex-none w-80 card-hover">
+                    <img src="image6.jpeg" alt="Ancient Artifacts" class="w-full h-48 object-cover rounded-t-lg">
+                    <h3 class="mt-4 text-2xl font-bold text-gray-800">Ancient Artifacts</h3>
+                    <p class="mt-2 text-gray-600">Explore the relics from ancient civilizations that shaped the world.
+                    </p>
+                </div>
+                <div class="carousel-item bg-white rounded-lg shadow-md p-6 flex-none w-80 card-hover">
+                    <img src="image7.jpeg" alt="Historical Paintings" class="w-full h-48 object-cover rounded-t-lg">
+                    <h3 class="mt-4 text-2xl font-bold text-gray-800">Historical Paintings</h3>
+                    <p class="mt-2 text-gray-600">View masterpieces that tell the stories of our past.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="p-8 bg-gray-100">
+        <h2 class="text-3xl font-semibold text-center mb-8">Upcoming Events</h2>
+        <div class="flex flex-wrap justify-around">
+            <div class="bg-white p-6 shadow-md rounded-lg w-full md:w-1/2 lg:w-1/3 mb-6 event-hover">
+                <h3 class="text-2xl font-bold text-gray-800">Historical Lecture</h3>
+                <p class="mt-2 text-gray-600">Join us for a fascinating lecture on ancient history, presented by
+                    renowned historian Dr. Jane Doe.</p>
+                <p class="mt-4 font-semibold text-gray-800">Date: October 15, 2024</p>
+                <p class="font-semibold text-gray-800">Time: 2:00 PM - 4:00 PM</p>
+            </div>
+            <div class="bg-white p-6 shadow-md rounded-lg w-full md:w-1/2 lg:w-1/3 mb-6 event-hover">
+                <h3 class="text-2xl font-bold text-gray-800">Art Exhibition</h3>
+                <p class="mt-2 text-gray-600">Experience an exclusive art exhibition featuring works from the
+                    Renaissance period.</p>
+                <p class="mt-4 font-semibold text-gray-800">Date: November 5, 2024</p>
+                <p class="font-semibold text-gray-800">Time: 10:00 AM - 6:00 PM</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="p-8 bg-gray-50 text-center">
+        <h2 class="text-3xl font-semibold mb-4">Contact Us</h2>
+        <p class="text-gray-600">Have questions or want to book a group tour? Reach out to us and we'll be happy to
+            assist you.</p>
+        <button
+            class="mt-4 bg-blue-600 text-white font-semibold rounded-full px-6 py-3 hover:bg-blue-700 transition ease-in-out duration-300">
+            Get in Touch
+        </button>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-gradient-to-r from-orange-400 to-red-500 text-white p-8 text-center">
+        <h2 class="text-3xl font-bold text-black">Plan Your Visit Today</h2>
+        <p class="mt-2 text-black">Explore our exhibits and events to make the most of your visit to the Museum of
+            History.</p>
+        <button
+            class="mt-4 bg-white text-red-500 font-semibold rounded-full px-6 py-3 hover:bg-red-600 hover:text-white transition ease-in-out duration-300">
+            Learn More
+        </button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white p-4 text-center">
+        <p>&copy; 2024 Museum of History. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
